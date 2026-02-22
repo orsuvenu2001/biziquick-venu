@@ -35,7 +35,7 @@ const Sidebar = ({ isCollapsed }) => {
         { name: 'Procurement', path: '/erp/procurement', icon: <MdShoppingCart />, 
           subItems: [
             { name: 'Purchase Orders', path: '/erp/procurement/purchase-orders' },
-            { name: 'Goods Receipt Note', path: '/erp/procurement/grn' },
+            { name: 'GRN', path: '/erp/procurement/grn' },
             { name: 'Purchase Invoices', path: '/erp/procurement/purchase-invoices' }
           ]
         },

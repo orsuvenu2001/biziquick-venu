@@ -11,7 +11,6 @@ const Header = ({ onMenuToggle, isCollapsed }) => {
         <button className="menu-toggle-btn" onClick={onMenuToggle}>
           {isCollapsed ? <LuPanelRightOpen /> : <LuPanelLeftOpen />}
         </button>
-        <div className="app-title">BiziQuick ERP</div>
       </div>
 
       <div className="header-center">

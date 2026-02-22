@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import PurchaseOrders from './pages/PurchaseOrders/PurchaseOrders';
 import GRN from './pages/GRN/GRN';
 import PurchaseInvoicesAdd from './pages/PurchaseInvoices/PurchaseInvoiceAdd';
+import NotFound from './pages/NotFound/NotFound';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="erp/procurement/purchase-orders" element={<PurchaseOrders />} />
           <Route path="erp/procurement/grn" element={<GRN />} />
           <Route path="erp/procurement/purchase-invoices" element={<PurchaseInvoicesAdd />} />
+          <Route path="*" element={<NotFound />} />
+
         </Route>
       </Routes>
     </Router>
