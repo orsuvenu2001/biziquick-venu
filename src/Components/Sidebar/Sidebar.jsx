@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.scss';
 import { MdDashboard, MdShoppingCart, MdInventory, MdFactory, MdBarChart, MdSettings } from 'react-icons/md';
-import { FaFileInvoice, FaBoxOpen } from 'react-icons/fa';
+import { FaFileInvoice, FaBoxOpen, FaUsers } from 'react-icons/fa';
 import { IoChevronDown, IoChevronForward } from 'react-icons/io5';
+import { HiQuestionMarkCircle } from 'react-icons/hi';
 import fullLogo from '../../assets/images/biziquickFullLogo.png';
 import smallLogo from '../../assets/images/biziquickLogo.png';
 
-const Sidebar = ({ isCollapsed }) => {
+const Sidebar = ({ isCollapsed, onToggle }) => {
   const location = useLocation();
   const [expandedMenus, setExpandedMenus] = useState({ ERP: true, Procurement: true });
 
@@ -18,10 +19,28 @@ const Sidebar = ({ isCollapsed }) => {
     }));
   };
 
+  const handleMenuClick = (item) => {
+    if (isCollapsed && onToggle) {
+      // If collapsed, expand the sidebar first
+      onToggle();
+      // If it has submenu, expand it after sidebar opens
+      if (item.hasSubmenu) {
+        setTimeout(() => {
+          setExpandedMenus(prev => ({
+            ...prev,
+            [item.name]: true
+          }));
+        }, 100);
+      }
+    } else if (item.hasSubmenu) {
+      toggleMenu(item.name);
+    }
+  };
+
   const menuItems = [
     {
       name: 'CRM',
-      icon: <MdDashboard />,
+      icon: <FaUsers />,
       path: '/crm',
       submenu: []
     },
@@ -35,7 +54,7 @@ const Sidebar = ({ isCollapsed }) => {
         { name: 'Procurement', path: '/erp/procurement', icon: <MdShoppingCart />, 
           subItems: [
             { name: 'Purchase Orders', path: '/erp/procurement/purchase-orders' },
-            { name: 'GRN', path: '/erp/procurement/grn' },
+            { name: 'Goods Receipt Note', path: '/erp/procurement/grn' },
             { name: 'Purchase Invoices', path: '/erp/procurement/purchase-invoices' }
           ]
         },
@@ -70,8 +89,8 @@ const Sidebar = ({ isCollapsed }) => {
             {item.hasSubmenu ? (
               <>
                 <div 
-                  className={`menu-item ${expandedMenus[item.name] ? 'active' : ''}`}
-                  onClick={() => toggleMenu(item.name)}
+                  className={`menu-item ${expandedMenus[item.name] ? 'expanded' : ''}`}
+                  onClick={() => handleMenuClick(item)}
                 >
                   <span className="menu-icon">{item.icon}</span>
                   {!isCollapsed && (
@@ -91,7 +110,7 @@ const Sidebar = ({ isCollapsed }) => {
                         {subItem.subItems ? (
                           <>
                             <div 
-                              className={`submenu-item ${expandedMenus[subItem.name] ? 'active' : ''}`}
+                              className={`submenu-item ${expandedMenus[subItem.name] ? 'expanded' : ''}`}
                               onClick={() => toggleMenu(subItem.name)}
                             >
                               <span className="submenu-icon">{subItem.icon}</span>
@@ -129,13 +148,21 @@ const Sidebar = ({ isCollapsed }) => {
                 )}
               </>
             ) : (
-              <Link
-                to={item.path}
+              <div
                 className={`menu-item ${location.pathname === item.path ? 'active' : ''}`}
+                onClick={() => {
+                  if (isCollapsed && onToggle) {
+                    onToggle();
+                  }
+                }}
               >
                 <span className="menu-icon">{item.icon}</span>
-                {!isCollapsed && <span className="menu-text">{item.name}</span>}
-              </Link>
+                {!isCollapsed && (
+                  <Link to={item.path} className="menu-text" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             )}
           </div>
         ))}
@@ -143,7 +170,9 @@ const Sidebar = ({ isCollapsed }) => {
 
       <div className="sidebar-footer">
         <button className="help-support">
-          <span className="help-icon">❓</span>
+          <span className="help-icon">
+            <HiQuestionMarkCircle />
+          </span>
           {!isCollapsed && <span>Help & Support</span>}
         </button>
       </div>

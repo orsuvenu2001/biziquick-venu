@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import {
   Box,
   Typography,
-  Select,
-  MenuItem,
   Checkbox,
   IconButton,
   Button,
-  Autocomplete,
-  TextField,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -23,10 +19,6 @@ import { Visibility, Delete, CheckCircle, Error, Close } from "@mui/icons-materi
 import "./PurchaseInvoiceAdd.scss";
 
 const PurchaseInvoiceAdd = ({ setType }) => {
-  // Temporary constant - will be replaced with status from API in future
-  const revisionRequired = true;
-  
-  const [activeStep, setActiveStep] = useState(6);
   const [selectedPO, setSelectedPO] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -387,8 +379,7 @@ const PurchaseInvoiceAdd = ({ setType }) => {
       </IconButton>
     </Box>
 
-      {/* Revision Required Banner */}
-      {revisionRequired && (
+   
         <Box className="revisionRequiredBanner">
           <Box className="revisionRequiredContent">
             <Box className="revisionRequiredHeader">
@@ -413,10 +404,8 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </Box>
           </Box>
         </Box>
-      )}
 
-      {/* STEP 1 */}
-      {activeStep >= 1 && (
+
         <Box className="erpStepCard">
           <Typography className="erpStepTitle">
             Step 1: Select Purchase Order
@@ -549,10 +538,9 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </div>
           )}
         </Box>
-      )}
+  
 
-      {/* STEP 2 */}
-      {activeStep >= 2 && (
+    
         <Box className="erpStepCard">
           <Typography className="erpStepTitle">
             Step 2: Select GRNs
@@ -584,10 +572,8 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             2 GRN(s) selected · Total: ₹54,760
           </Box>
         </Box>
-      )}
 
-      {/* STEP 3 */}
-      {activeStep >= 3 && (
+
         <Box className="erpStepCard">
           <Typography className="erpStepTitle">
             Step 3: Enter Vendor Invoice Details
@@ -754,10 +740,8 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </Box>
           </Box>
         </Box>
-      )}
 
-      {/* STEP 4 */}
-      {activeStep >= 4 && (
+
         <Box className="erpStepCard">
           <Typography className="erpStepTitle">
             Step 4: PO-GRN-Invoice Matching Validation
@@ -864,10 +848,8 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </Box>
           )}
         </Box>
-      )}
 
-      {/* STEP 5 */}
-      {activeStep >= 5 && (
+
         <Box className="erpStepCard">
           <Box className="additionalChargesHeader">
             <Typography className="erpStepTitle">
@@ -930,10 +912,8 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </Box>
           )}
         </Box>
-      )}
 
-      {/* STEP 6: PAYMENT RECORDING */}
-      {activeStep >= 6 && (
+
         <Box className="erpStepCard">
           <Box className="paymentRecordingHeader">
             <Box className="paymentRecordingTitleSection">
@@ -1045,7 +1025,7 @@ const PurchaseInvoiceAdd = ({ setType }) => {
             </Box>
           )}
         </Box>
-      )}
+
 
       {/* ACTIONS FOOTER */}
       <Box className="erpActionsBar">

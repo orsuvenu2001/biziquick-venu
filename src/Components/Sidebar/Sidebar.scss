@@ -1,8 +1,8 @@
 .sidebar {
-  width: 200px;
-  min-height: 100vh;
-  background-color: #ffffff;
-  border-right: 1px solid #e0e0e0;
+  width: 240px;
+  height: 100vh;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease;
@@ -10,10 +10,11 @@
   left: 0;
   top: 0;
   z-index: 100;
-  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
 
   &.collapsed {
-    width: 64px;
+    width: 80px;
+    background-color: #ffffff;
 
     .logo-text {
       display: none;
@@ -21,42 +22,175 @@
 
     .menu-text,
     .menu-arrow,
+    .submenu,
     .submenu-text,
     .submenu-arrow {
       display: none;
     }
 
-    .sidebar-footer .help-support span:not(.help-icon) {
-      display: none;
+    .sidebar-header {
+      background-color: #ffffff;
+      padding: 16px 8px;
+    }
+
+    .sidebar-menu {
+      padding: 16px 8px;
+      align-items: center;
+
+      .menu-item-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .menu-item {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: none;
+
+        .menu-icon {
+          min-width: 40px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin: 0;
+          background-color: transparent;
+          border: none;
+          font-size: 18px;
+          color: #9ca3af;
+        }
+      }
+
+      // Override colors for collapsed state - pale backgrounds with colored icons
+      .menu-item-wrapper:first-child .menu-item {
+        background: transparent;
+        box-shadow: none;
+        
+        .menu-icon {
+          background-color: #fae8ff;
+          border: none;
+          color: #a855f7;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          
+          .menu-icon {
+            background-color: #f3e8ff;
+            box-shadow: 0 2px 8px rgba(168, 85, 247, 0.15);
+          }
+        }
+      }
+
+      .menu-item-wrapper:nth-child(2) .menu-item {
+        background: transparent;
+        box-shadow: none;
+        
+        .menu-icon {
+          background-color: #dbeafe;
+          border: none;
+          color: #3b82f6;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          
+          .menu-icon {
+            background-color: #bfdbfe;
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+          }
+        }
+      }
+
+      .menu-item-wrapper:last-child .menu-item {
+        background: transparent;
+        box-shadow: none;
+        
+        .menu-icon {
+          background-color: #fed7aa;
+          border: none;
+          color: #f97316;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          
+          .menu-icon {
+            background-color: #fdba74;
+            box-shadow: 0 2px 8px rgba(249, 115, 22, 0.15);
+          }
+        }
+      }
+    }
+
+    .sidebar-footer {
+      background-color: #ffffff;
+      padding: 16px 8px;
+
+      .help-support {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        border: none;
+        background-color: #d1fae5;
+
+        span:not(.help-icon) {
+          display: none;
+        }
+
+        .help-icon {
+          margin: 0;
+          min-width: auto;
+          width: auto;
+          height: auto;
+          background-color: transparent;
+          font-size: 18px;
+          color: #10b981;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          background-color: #a7f3d0;
+          box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+
+          .help-icon {
+            color: #059669;
+          }
+        }
+      }
     }
   }
 
   .sidebar-header {
-    padding: 12px;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 16px 12px;
+    border-bottom: 1px solid #e5e7eb;
     background-color: #ffffff;
-    min-height: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     .logo {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 40px;
       
       .logo-full {
-        max-width: 150px;
-        max-height: 40px;
-        height: auto;
+        max-width: 160px;
+        height: 38px;
         object-fit: contain;
       }
 
       .logo-small {
         width: 32px;
-        height: 32px;
+        height: 38px;
         object-fit: contain;
       }
     }
@@ -64,143 +198,341 @@
 
   .sidebar-menu {
     flex: 1;
-    padding: 8px 0;
+    padding: 12px 8px;
     overflow-y: auto;
+    overflow-x: hidden;
 
     .menu-item-wrapper {
-      margin-bottom: 2px;
+      margin-bottom: 6px;
     }
 
     .menu-item {
       display: flex;
       align-items: center;
       padding: 10px 12px;
-      color: #5f6368;
+      color: #6b7280;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       gap: 12px;
-      margin: 0 8px;
-      border-radius: 8px;
+      margin: 0;
+      border-radius: 12px;
+      background-color: #f3f4f6;
+      box-shadow: none;
 
       .menu-icon {
-        font-size: 20px;
+        font-size: 22px;
         display: flex;
         align-items: center;
-        min-width: 20px;
         justify-content: center;
+        min-width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 10px;
+        color: #6b7280;
+        transition: all 0.25s ease;
       }
 
       .menu-text {
         flex: 1;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 0.2px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        color: #374151;
       }
 
       .menu-arrow {
-        font-size: 14px;
+        font-size: 18px;
         display: flex;
         align-items: center;
         transition: transform 0.2s ease;
+        color: #9ca3af;
       }
 
       &:hover {
-        background-color: #f5f5f5;
-        color: #202124;
+        background-color: #e5e7eb;
       }
 
-      &.active {
-        background-color: #6366f1;
-        color: #ffffff;
+      // Expanded state (like ERP when opened)
+      &.expanded {
+        background-color: #dbeafe;
+        color: #1e40af;
+        box-shadow: none;
+
+        .menu-icon {
+          background-color: #3b82f6;
+          color: #ffffff;
+        }
+
+        .menu-text {
+          color: #1e40af;
+        }
+
+        .menu-arrow {
+          color: #1e40af;
+          transform: rotate(180deg);
+        }
 
         &:hover {
-          background-color: #5558e3;
+          background-color: #bfdbfe;
         }
       }
     }
 
+    .menu-item-wrapper:first-child .menu-item {
+      .menu-icon {
+        background-color: #fae8ff;
+        color: #a855f7;
+      }
+    }
+
+    .menu-item-wrapper:nth-child(2) .menu-item {
+      .menu-icon {
+        background-color: #dbeafe;
+        color: #3b82f6;
+      }
+    }
+
+    .menu-item-wrapper:last-child .menu-item {
+      .menu-icon {
+        background-color: #fed7aa;
+        color: #f97316;
+      }
+    }
+
+    // Specific styling for CRM when active - LIGHT PINK
+    .menu-item-wrapper:first-child .menu-item.active {
+      background-color: #fce7f3;
+      box-shadow: none;
+      
+      .menu-icon {
+        background-color: #ec4899;
+        color: #ffffff;
+      }
+
+      .menu-text {
+        color: #be185d;
+      }
+
+      .menu-arrow {
+        color: #be185d;
+      }
+
+      &:hover {
+        background-color: #fbcfe8;
+      }
+    }
+
+    // Specific styling for ERP when active - LIGHT BLUE
+    .menu-item-wrapper:nth-child(2) .menu-item.active {
+      background-color: #dbeafe;
+      box-shadow: none;
+      
+      .menu-icon {
+        background-color: #3b82f6;
+        color: #ffffff;
+      }
+
+      .menu-text {
+        color: #1e40af;
+      }
+
+      .menu-arrow {
+        color: #1e40af;
+      }
+
+      &:hover {
+        background-color: #bfdbfe;
+      }
+    }
+
+    // Specific styling for Configurations when active - LIGHT ORANGE
+    .menu-item-wrapper:last-child .menu-item.active {
+      background-color: #fed7aa;
+      box-shadow: none;
+      
+      .menu-icon {
+        background-color: #f97316;
+        color: #ffffff;
+      }
+
+      .menu-text {
+        color: #c2410c;
+      }
+
+      .menu-arrow {
+        color: #c2410c;
+      }
+
+      &:hover {
+        background-color: #fdba74;
+      }
+    }
+
     .submenu {
-      background-color: transparent;
-      padding: 0;
-      margin-left: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: #ffffff;
+      border-radius: 8px;
+      margin: 4px 0 6px 0;
+      padding: 6px 0;
+      position: relative;
+
+      // Vertical line connecting submenu items
+      &::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        bottom: 16px;
+        width: 2px;
+        background-color: #e5e7eb;
+        border-radius: 1px;
+      }
 
       .submenu-item {
         display: flex;
         align-items: center;
-        padding: 9px 12px 9px 44px;
-        color: #5f6368;
+        padding: 8px 12px 8px 16px;
+        color: #374151;
         text-decoration: none;
         cursor: pointer;
-        transition: all 0.15s ease;
-        gap: 10px;
-        font-size: 13px;
-        margin: 0 8px 2px 0;
-        border-radius: 8px;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        gap: 12px;
+        border-radius: 10px;
+        margin: 2px 8px 2px 28px;
+        position: relative;
+        background-color: transparent;
 
         .submenu-icon {
-          font-size: 18px;
+          font-size: 20px;
           display: flex;
           align-items: center;
-          min-width: 18px;
           justify-content: center;
+          min-width: 24px;
+          height: 24px;
+          color: #6b7280;
+          background-color: transparent;
+          border-radius: 0;
+          transition: all 0.25s ease;
         }
 
         .submenu-text {
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 0;
+          color: #6b7280;
           flex: 1;
-          font-size: 13px;
-          font-weight: 400;
         }
 
         .submenu-arrow {
-          font-size: 13px;
+          margin-left: auto;
+          font-size: 16px;
           display: flex;
           align-items: center;
+          transition: transform 0.2s ease;
+          color: #9ca3af;
         }
 
         &:hover {
-          background-color: #f5f5f5;
-          color: #202124;
+          background-color: #f3f4f6;
+
+          .submenu-icon {
+            color: #374151;
+          }
+
+          .submenu-text {
+            color: #374151;
+          }
         }
 
         &.active {
-          background-color: #e8eaf6;
-          color: #6366f1;
-          font-weight: 500;
+          background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+          box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+
+          .submenu-icon {
+            color: #ffffff;
+          }
+
+          .submenu-text {
+            color: #ffffff;
+            font-weight: 600;
+          }
+
+          .submenu-arrow {
+            color: #ffffff;
+          }
+
+          &:hover {
+            background: linear-gradient(135deg, #5558e3 0%, #4338ca 100%);
+          }
+        }
+
+        // Expanded state for submenu items with children (like Procurement)
+        // Only style the arrow, no background change
+        &.expanded {
+          .submenu-arrow {
+            transform: rotate(180deg);
+          }
         }
       }
 
       .sub-submenu {
         background-color: transparent;
         margin-left: 0;
+        padding: 0;
+        position: relative;
+
+        // Vertical line for sub-submenu items - aligned with Procurement icon center
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50px;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background-color: #e5e7eb;
+          border-radius: 1px;
+        }
 
         .sub-submenu-item {
           display: flex;
           align-items: center;
-          padding: 8px 12px 8px 68px;
-          color: #5f6368;
+          padding: 8px 0;
+          color: #6b7280;
           text-decoration: none;
           cursor: pointer;
-          transition: all 0.15s ease;
-          font-size: 13px;
-          margin: 0 8px 2px 0;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          font-size: 14px;
+          margin: 2px 8px 2px 60px;
           border-radius: 8px;
+          position: relative;
 
           .sub-submenu-text {
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 500;
+            color: #6b7280;
+            padding-left: 12px;
           }
 
           &:hover {
-            background-color: #f5f5f5;
-            color: #202124;
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+
+            .sub-submenu-text {
+              color: #374151;
+            }
           }
 
           &.active {
             background-color: #6366f1;
             color: #ffffff;
-            font-weight: 500;
+
+            .sub-submenu-text {
+              color: #ffffff;
+              font-weight: 600;
+            }
           }
         }
       }
@@ -209,8 +541,9 @@
 
   .sidebar-footer {
     padding: 12px;
-    border-top: 1px solid #e0e0e0;
-    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    background-color: transparent;
+    margin-top: auto;
 
     .help-support {
       display: flex;
@@ -218,25 +551,81 @@
       gap: 10px;
       width: 100%;
       padding: 10px 12px;
-      background-color: #ffffff;
-      border: 1px solid #dadce0;
-      border-radius: 20px;
-      color: #5f6368;
-      font-size: 13px;
-      font-weight: 500;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border: none;
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.15s ease;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
       justify-content: center;
 
       .help-icon {
-        font-size: 18px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        transition: all 0.25s ease;
+      }
+
+      .help-text {
+        font-size: 15px;
+        font-weight: 600;
       }
 
       &:hover {
-        background-color: #f8f9fa;
-        border-color: #c6c9cc;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+
+        .help-icon {
+          background-color: rgba(255, 255, 255, 0.3);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    .sidebar-footer {
+      padding: 12px;
+
+      .help-support {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+
+        .help-icon {
+          min-width: auto;
+          width: 24px;
+          height: 24px;
+          font-size: 24px;
+          background-color: transparent;
+          border-radius: 0;
+        }
+
+        .help-text {
+          display: none;
+        }
+
+        &:hover {
+          transform: translateY(-2px) scale(1.05);
+          box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
+
+          .help-icon {
+            background-color: transparent;
+            transform: scale(1);
+          }
+        }
       }
     }
   }

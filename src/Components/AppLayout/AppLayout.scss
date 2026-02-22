@@ -5,13 +5,13 @@
 
   .main-container {
     flex: 1;
-    margin-left: 200px;
+    margin-left: 240px;
     display: flex;
     flex-direction: column;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.sidebar-collapsed {
-      margin-left: 64px;
+      margin-left: 80px;
     }
 
     .content-area {

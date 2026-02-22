@@ -13,7 +13,7 @@ const AppLayout = () => {
 
   return (
     <div className="app-layout">
-      <Sidebar isCollapsed={isSidebarCollapsed} />
+      <Sidebar isCollapsed={isSidebarCollapsed} onToggle={toggleSidebar} />
       <div className={`main-container ${isSidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
         <Header onMenuToggle={toggleSidebar} isCollapsed={isSidebarCollapsed} />
         <main className="content-area">
