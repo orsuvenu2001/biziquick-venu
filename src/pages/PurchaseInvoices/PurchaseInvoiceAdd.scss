@@ -1,0 +1,1922 @@
+.erpCreateHeader {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  padding: 22px 28px !important;
+  border-radius: 20px !important;
+  width: 100% !important;
+}
+
+/* ---------- LEFT ---------- */
+.erpCreateHeaderLeft {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+
+/* ---------- ICON ---------- */
+.erpCreateHeaderIcon {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 16px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+/* ---------- TITLE ---------- */
+.erpCreateHeaderTitle {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 28px !important;
+  color: #ffffff !important;
+}
+
+.erpCreateHeaderTitle.MuiTypography-root {
+  color: #ffffff !important;
+}
+
+/* ---------- SUBTITLE ---------- */
+.erpCreateHeaderSubtitle {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+  margin-top: 4px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.erpCreateHeaderSubtitle.MuiTypography-root {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ---------- CLOSE ---------- */
+.erpCreateHeaderClose {
+  color: #ffffff !important;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .erpCreateHeader {
+    padding: 18px 20px !important;
+  }
+
+  .erpCreateHeaderTitle {
+    font-size: 20px !important;
+  }
+}
+
+
+/* ---------- REVISION REQUIRED BANNER ---------- */
+.revisionRequiredBanner {
+  background: #fffbeb !important;
+  border: 1px solid #fed7aa !important;
+  border-left: 5px solid #f97316 !important;
+  border-radius: 8px !important;
+  margin-top: 20px !important;
+  overflow: hidden !important;
+}
+
+.revisionRequiredContent {
+  padding: 24px !important;
+}
+
+.revisionRequiredHeader {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.revisionRequiredIcon {
+  width: 20px !important;
+  height: 20px !important;
+  color: #ea580c !important;
+  flex-shrink: 0 !important;
+}
+
+.revisionRequiredTitle {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #7c2d12 !important;
+  margin: 0 !important;
+}
+
+.revisionRequiredMessage {
+  font-size: 14px !important;
+  color: #7c2d12 !important;
+  margin-bottom: 20px !important;
+  line-height: 1.5 !important;
+}
+
+.managerComments {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  padding: 16px 20px !important;
+  margin-top: 4px !important;
+}
+
+.managerCommentsLabel {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin-bottom: 16px !important;
+  display: block !important;
+}
+
+.managerCommentItem {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.managerCommentHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 12px !important;
+}
+
+.managerName {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+}
+
+.managerCommentDate {
+  font-size: 13px !important;
+  color: #9ca3af !important;
+}
+
+.managerCommentText {
+  font-size: 14px !important;
+  color: #4b5563 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  background: #f9fafb !important;
+  padding: 12px 16px !important;
+  border-radius: 6px !important;
+  border-left: 3px solid #e5e7eb !important;
+}
+
+/* ---------- CARD ---------- */
+.erpStepCard {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  margin-top: 20px !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* ---------- TITLES ---------- */
+.erpStepTitle {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+/* ---------- LABELS ---------- */
+.erpLabel {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+
+  // Style for required asterisk
+  .required-asterisk,
+  span.asterisk {
+    color: #ef4444 !important; // Red color
+    font-weight: 600 !important;
+  }
+}
+
+/* ---------- INPUTS ---------- */
+.erpInput {
+  height: 48px !important;
+  border-radius: 10px !important;
+  border: 1px solid #d1d5db !important;
+  padding: 0 14px !important;
+  font-size: 14px !important;
+}
+
+.erpInput.small {
+  width: 120px !important;
+}
+
+/* ---------- TEXTAREA ---------- */
+.erpTextarea {
+  width: 100% !important;
+  min-height: 100px !important;
+  border-radius: 10px !important;
+  border: 1px solid #d1d5db !important;
+  padding: 14px !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+  resize: vertical !important; /* Only allow vertical resizing */
+  outline: none !important;
+  transition: all 0.2s !important;
+  
+  &:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  }
+  
+  &::placeholder {
+    color: #9ca3af !important;
+  }
+}
+
+/* ---------- ERROR STATES ---------- */
+.erpInput.error,
+.erpTextarea.error {
+  border-color: #dc2626 !important;
+  
+  &:focus {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+  }
+}
+
+.erpSelect.error {
+  border-color: #dc2626 !important;
+  
+  &:focus {
+    border-color: #dc2626 !important;
+  }
+}
+
+.erpSelect.MuiOutlinedInput-root.error {
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #dc2626 !important;
+  }
+
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #dc2626 !important;
+  }
+
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #dc2626 !important;
+  }
+}
+
+.customDropdown.error .customDropdownTrigger {
+  border-color: #dc2626 !important;
+  
+  &:hover {
+    border-color: #dc2626 !important;
+  }
+}
+
+.errorHelperText {
+  color: #dc2626 !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  line-height: 1.5 !important;
+  display: block !important;
+}
+
+/* ---------- SELECT ---------- */
+.erpSelect {
+  width: 100% !important;
+  height: 48px !important;
+  padding: 0 36px 0 14px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  outline: none !important;
+  transition: all 0.2s !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%236b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 20px !important;
+  cursor: pointer !important;
+
+  &:hover {
+    border-color: #9ca3af !important;
+  }
+
+  &:focus {
+    border-color: #2563eb !important;
+  }
+}
+
+/* MUI Select styles (for backward compatibility) */
+.erpSelect.MuiOutlinedInput-root {
+  border-radius: 10px !important;
+  
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #d1d5db !important;
+  }
+
+  &:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #9ca3af !important;
+  }
+
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #2563eb !important;
+  }
+}
+
+/* ---------- AUTOCOMPLETE ---------- */
+.erpAutocomplete {
+  width: 100% !important;
+
+  .MuiOutlinedInput-root {
+    height: 48px !important;
+    border-radius: 10px !important;
+    padding-right: 14px !important;
+    background-color: #ffffff !important;
+
+    .MuiOutlinedInput-notchedOutline {
+      border: 1px solid #d1d5db !important;
+    }
+
+    &:hover .MuiOutlinedInput-notchedOutline {
+      border-color: #9ca3af !important;
+    }
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: #2563eb !important;
+      border-width: 1px !important;
+    }
+  }
+
+  .MuiInputBase-input {
+    font-size: 14px !important;
+    padding: 14px !important;
+    height: 20px !important;
+    color: #111827 !important;
+    cursor: pointer !important;
+  }
+
+  .MuiAutocomplete-endAdornment {
+    right: 9px !important;
+    top: calc(50% - 12px) !important;
+  }
+
+  .MuiAutocomplete-popupIndicator {
+    color: #6b7280 !important;
+  }
+}
+
+/* ---------- CUSTOM DROPDOWN ---------- */
+.customDropdown {
+  position: relative !important;
+  width: 100% !important;
+}
+
+.customDropdownTrigger {
+  width: 100% !important;
+  height: 48px !important;
+  border-radius: 8px !important;
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+  padding: 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  transition: all 0.2s !important;
+
+  &:hover {
+    border-color: #9ca3af !important;
+  }
+
+  span {
+    flex: 1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  svg {
+    flex-shrink: 0 !important;
+    margin-left: 8px !important;
+  }
+}
+
+.customDropdownMenu {
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1000 !important;
+  overflow: hidden !important;
+  padding: 8px !important;
+}
+
+.customDropdownSearchWrapper {
+  position: relative !important;
+  margin-bottom: 8px !important;
+}
+
+.customDropdownSearchIcon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #9ca3af !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.customDropdownSearch {
+  width: 100% !important;
+  height: 44px !important;
+  border: 2px solid #3b82f6 !important;
+  border-radius: 8px !important;
+  padding: 0 16px 0 44px !important;
+  font-size: 14px !important;
+  outline: none !important;
+  background: #ffffff !important;
+
+  &::placeholder {
+    color: #9ca3af !important;
+  }
+
+  &:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  }
+}
+
+.customDropdownList {
+  max-height: 280px !important;
+  overflow-y: auto !important;
+  padding: 4px 0 !important;
+
+  &::-webkit-scrollbar {
+    width: 6px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f3f4f6 !important;
+    border-radius: 3px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #d1d5db !important;
+    border-radius: 3px !important;
+
+    &:hover {
+      background: #9ca3af !important;
+    }
+  }
+}
+
+.customDropdownItem {
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  border-radius: 6px !important;
+  margin: 2px 0 !important;
+
+  &:hover {
+    background-color: #f3f4f6 !important;
+  }
+
+  &.selected {
+    background-color: #dbeafe !important;
+    color: #2563eb !important;
+    font-weight: 600 !important;
+  }
+}
+
+.customDropdownEmpty {
+  padding: 20px 16px !important;
+  font-size: 14px !important;
+  color: #9ca3af !important;
+  text-align: center !important;
+}
+
+/* ---------- PO DETAILS ---------- */
+.poDetailsAccordion {
+  margin-top: 16px !important;
+}
+
+.poDetailsHeader {
+  background: #eff6ff !important;
+  padding: 16px !important;
+  border-radius: 12px !important;
+  border: 1px solid #bfdbfe !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+
+  &:hover {
+    background: #dbeafe !important;
+  }
+}
+
+.poDetailsLeft {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.poDetailsIcon {
+  font-size: 20px !important;
+  color: #2563eb !important;
+}
+
+.poDetailsTitle {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1e40af !important;
+}
+
+.poDetailsChevron {
+  font-size: 20px !important;
+  color: #2563eb !important;
+  transition: transform 0.2s !important;
+}
+
+.poDetailsContent {
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  border-top: none !important;
+  border-radius: 0 0 12px 12px !important;
+  padding: 20px !important;
+  margin-top: -10px !important;
+}
+
+.poDetailsGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+}
+
+.poDetailItem {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.poDetailIcon {
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(37, 99, 235, 0.1) !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  color: #2563eb !important;
+  flex-shrink: 0 !important;
+}
+
+.poDetailInfo {
+  flex: 1 !important;
+}
+
+.poDetailLabel {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #2563eb !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 4px !important;
+}
+
+.poDetailValue {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+/* ---------- GRID ---------- */
+.grid4 {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+/* ---------- GRN ---------- */
+.grnCard {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 16px 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #bfdbfe !important;
+  background: #eff6ff !important;
+  margin-bottom: 12px !important;
+  transition: all 0.2s !important;
+
+  &:hover {
+    background: #dbeafe !important;
+  }
+}
+
+.grnCheckbox {
+  color: #2563eb !important;
+  
+  &.Mui-checked {
+    color: #2563eb !important;
+  }
+}
+
+.grnIcon {
+  font-size: 24px !important;
+  color: #2563eb !important;
+  flex-shrink: 0 !important;
+}
+
+.grnInfo {
+  flex: 1 !important;
+}
+
+.grnNumber {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+.grnSub {
+  font-size: 13px !important;
+  color: #64748b !important;
+  margin-top: 2px !important;
+}
+
+.grnAmount {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  margin-right: 8px !important;
+}
+
+.grnViewBtn {
+  color: #2563eb !important;
+  
+  &:hover {
+    background-color: rgba(37, 99, 235, 0.08) !important;
+  }
+}
+
+/* ---------- SUMMARY ---------- */
+.grnSummary {
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  padding: 14px 20px !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1e40af !important;
+  margin-top: 8px !important;
+}
+
+/* ---------- STEP 3: VENDOR INVOICE ---------- */
+.vendorInvoiceForm {
+  margin-top: 20px !important;
+}
+
+.formRow {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.formField {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.formFieldFull {
+  grid-column: 1 / 3 !important;
+}
+
+.erpFieldHint {
+  font-size: 12px !important;
+  color: #9ca3af !important;
+  margin-top: 6px !important;
+}
+
+.erpDateInput {
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer !important;
+    filter: opacity(0.6) !important;
+  }
+}
+
+.vendorItemsSection {
+  margin-top: 24px !important;
+}
+
+.vendorItemsHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 16px !important;
+}
+
+.grnItemsDropdown {
+  width: 280px !important;
+  height: 40px !important;
+  padding: 0 36px 0 12px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  color: #374151 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: all 0.2s !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: #ffffff !important;
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%236b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 20px !important;
+
+  &:hover:not(:disabled) {
+    border-color: #9ca3af !important;
+  }
+
+  &:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  }
+
+  &:disabled {
+    background-color: #f3f4f6 !important;
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%239ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 20px !important;
+    color: #9ca3af !important;
+    cursor: not-allowed !important;
+  }
+}
+
+.vendorItemsTable {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+.vendorItemsTableHeader {
+  display: grid !important;
+  grid-template-columns: 110px 1fr 90px 90px 110px 80px 130px 50px !important;
+  background: #f9fafb !important;
+  padding: 14px 20px !important;
+  gap: 12px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+.vendorItemsTableRow {
+  display: grid !important;
+  grid-template-columns: 110px 1fr 90px 90px 110px 80px 130px 50px !important;
+  padding: 12px 20px !important;
+  gap: 12px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  align-items: center !important;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  &:hover {
+    background: #f9fafb !important;
+  }
+}
+
+.vendorItemsTableCell {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  color: #1e293b !important;
+}
+
+.vendorItemInput {
+  width: 100% !important;
+  height: 36px !important;
+  padding: 0 10px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  color: #1e293b !important;
+  background: #ffffff !important;
+  outline: none !important;
+  transition: all 0.2s !important;
+
+  &:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  }
+
+  &:read-only {
+    background: #f9fafb !important;
+    color: #64748b !important;
+    cursor: not-allowed !important;
+  }
+}
+
+.vendorItemInputSmall {
+  max-width: 90% !important;
+}
+
+.vendorItemTotal {
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  justify-content: flex-start !important;
+}
+
+.vendorItemActions {
+  justify-content: center !important;
+}
+
+.vendorItemDeleteBtn {
+  color: #ef4444 !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+
+  &:hover {
+    background-color: #fee2e2 !important;
+  }
+
+  svg {
+    font-size: 20px !important;
+    color: #ef4444 !important;
+  }
+
+  .MuiSvgIcon-root {
+    color: #ef4444 !important;
+  }
+}
+
+.vendorItemsEmpty {
+  padding: 40px 20px !important;
+  text-align: center !important;
+  color: #9ca3af !important;
+  font-size: 14px !important;
+  border-bottom: none !important;
+}
+
+/* ---------- STEP 4: MATCHING VALIDATION ---------- */
+.matchingTable {
+  margin-top: 20px !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+.matchingTableHeader {
+  display: grid !important;
+  grid-template-columns: 200px 80px 90px 90px 100px 110px 120px 130px 1fr !important;
+  gap: 12px !important;
+  background: #f9fafb !important;
+  padding: 14px 20px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+.matchingTableRow {
+  display: grid !important;
+  grid-template-columns: 200px 80px 90px 90px 100px 110px 120px 130px 1fr !important;
+  gap: 12px !important;
+  padding: 16px 20px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  align-items: center !important;
+  transition: background-color 0.15s !important;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  &.matched {
+    background: #f0fdf4 !important;
+  }
+
+  &.unmatched {
+    background: #fef2f2 !important;
+  }
+}
+
+.matchingTableCell {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  color: #1e293b !important;
+
+  &.itemCell {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  &.statusCell {
+    justify-content: flex-start !important;
+  }
+
+  &.detailsCell {
+    font-size: 13px !important;
+    color: #64748b !important;
+  }
+}
+
+.itemCode {
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  font-size: 14px !important;
+}
+
+.itemName {
+  font-size: 12px !important;
+  color: #64748b !important;
+  margin-top: 2px !important;
+}
+
+.statusBadge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+
+  svg {
+    font-size: 16px !important;
+  }
+
+  &.matched {
+    background: #d1fae5 !important;
+    color: #065f46 !important;
+  }
+
+  &.unmatched {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+  }
+}
+
+.matchingAlert {
+  margin-top: 20px !important;
+  padding: 16px 20px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+
+  &.success {
+    background: #f0fdf4 !important;
+    border: 1px solid #86efac !important;
+  }
+
+  &.warning {
+    background: #fffbeb !important;
+    border: 1px solid #fde047 !important;
+  }
+
+  &.error {
+    background: #fef2f2 !important;
+    border: 1px solid #fca5a5 !important;
+  }
+}
+
+.alertIcon {
+  font-size: 24px !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+
+  .matchingAlert.success & {
+    color: #16a34a !important;
+  }
+
+  .matchingAlert.warning & {
+    color: #d97706 !important;
+  }
+
+  .matchingAlert.error & {
+    color: #dc2626 !important;
+  }
+}
+
+.alertContent {
+  flex: 1 !important;
+}
+
+.alertTitle {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
+
+  .matchingAlert.success & {
+    color: #16a34a !important;
+  }
+
+  .matchingAlert.warning & {
+    color: #d97706 !important;
+  }
+
+  .matchingAlert.error & {
+    color: #dc2626 !important;
+  }
+}
+
+.alertMessage {
+  font-size: 14px !important;
+
+  .matchingAlert.success & {
+    color: #166534 !important;
+  }
+
+  .matchingAlert.warning & {
+    color: #92400e !important;
+  }
+
+  .matchingAlert.error & {
+    color: #991b1b !important;
+  }
+}
+
+.removeUnmatchedBtn {
+  background: #f97316 !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  flex-shrink: 0 !important;
+
+  &:hover {
+    background: #ea580c !important;
+  }
+
+  svg {
+    font-size: 18px !important;
+  }
+}
+
+.matchingEmpty {
+  padding: 40px 20px !important;
+  text-align: center !important;
+  color: #9ca3af !important;
+  font-size: 14px !important;
+  background: #f9fafb !important;
+  border-radius: 12px !important;
+  margin-top: 20px !important;
+}
+
+/* ---------- OLD MATCHING STYLES (deprecated) ---------- */
+.matchTable {
+  margin-top: 16px !important;
+}
+
+.matchRow {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 14px !important;
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.matchRow.matched {
+  background: #ecfdf5 !important;
+  color: #16a34a !important;
+}
+
+.matchRow.unmatched {
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+
+/* ---------- PARTIAL ---------- */
+.partialMatch {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: #fff7ed !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+}
+
+.removeBtn {
+  background: #f97316 !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+}
+
+/* ---------- CHARGES ---------- */
+.chargeRow {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-top: 12px !important;
+}
+
+/* ---------- STEP 5: ADDITIONAL CHARGES ---------- */
+.additionalChargesHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+}
+
+.addChargeBtn {
+  background: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+  color: #374151 !important;
+  padding: 10px 20px !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  span {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+  }
+
+  &:hover {
+    background: #e5e7eb !important;
+    border-color: #d1d5db !important;
+  }
+
+  &:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+.additionalChargesTable {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+.additionalChargesTableHeader {
+  display: grid !important;
+  grid-template-columns: 2.5fr 0.8fr 0.8fr 1.2fr 1.2fr 50px !important;
+  gap: 12px !important;
+  padding: 14px 20px !important;
+  background: #f9fafb !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #e5e7eb !important;
+
+  .required-asterisk {
+    color: #ef4444 !important;
+    font-weight: 600 !important;
+  }
+}
+
+.additionalChargesRow {
+  display: grid !important;
+  grid-template-columns: 2.5fr 0.8fr 0.8fr 1.2fr 1.2fr 50px !important;
+  gap: 12px !important;
+  padding: 12px 20px !important;
+  align-items: start !important;
+  border-bottom: 1px solid #e5e7eb !important;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  &:hover {
+    background: #f9fafb !important;
+  }
+
+  input.erpInput {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 36px !important;
+    padding: 0 10px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    background: #ffffff !important;
+    outline: none !important;
+    transition: all 0.2s !important;
+
+    &:focus {
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+    }
+
+    &.error {
+      border-color: #dc2626 !important;
+      
+      &:focus {
+        border-color: #dc2626 !important;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+      }
+    }
+  }
+
+  .readonlyValue {
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    font-size: 14px !important;
+    align-self: center !important;
+  }
+}
+
+.chargeFieldWrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+
+  .errorHelperText {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    margin-top: 2px !important;
+  }
+}
+
+.deleteChargeBtn {
+  color: #ef4444 !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+  align-self: center !important;
+
+  &:hover {
+    background-color: #fee2e2 !important;
+  }
+
+  svg {
+    font-size: 20px !important;
+    color: #ef4444 !important;
+  }
+
+  .MuiSvgIcon-root {
+    color: #ef4444 !important;
+  }
+}
+
+/* ---------- STEP 6: PAYMENT RECORDING ---------- */
+.paymentRecordingHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-bottom: 24px !important;
+}
+
+.paymentRecordingTitleSection {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+}
+
+.paymentRecordingIcon {
+  font-size: 24px !important;
+  color: #10b981 !important;
+  margin-top: 4px !important;
+}
+
+.paymentRecordingSubtitle {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+  margin-top: 4px !important;
+}
+
+.addPaymentBtn {
+  background: #10b981 !important;
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  padding: 6px 16px !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-size: 14px !important;
+  box-shadow: none !important;
+  height: 36px !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: inherit !important;
+  transition: all 0.2s ease !important;
+
+  span {
+    font-size: 16px !important;
+    line-height: 1 !important;
+  }
+
+  &:hover {
+    background: #059669 !important;
+    background-color: #059669 !important;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2) !important;
+  }
+
+  &:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+.paymentSummaryBoxes {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+}
+
+.paymentSummaryBox {
+  padding: 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid !important;
+}
+
+.invoiceTotalBox {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+
+  .paymentSummaryValue {
+    color: #1e40af !important;
+  }
+}
+
+.totalPaidBox {
+  background: #f0fdf4 !important;
+  border-color: #bbf7d0 !important;
+
+  .paymentSummaryValue {
+    color: #15803d !important;
+  }
+}
+
+.outstandingBox {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+
+  .paymentSummaryValue {
+    color: #b91c1c !important;
+  }
+}
+
+.paymentSummaryLabel {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #6b7280 !important;
+  margin-bottom: 8px !important;
+}
+
+.paymentSummaryValue {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+
+.paymentEmptyState {
+  padding: 60px 20px !important;
+  text-align: center !important;
+  border: 2px dashed #d1d5db !important;
+  border-radius: 12px !important;
+  background: #f9fafb !important;
+}
+
+.paymentEmptyIcon {
+  font-size: 48px !important;
+  color: #9ca3af !important;
+  margin-bottom: 16px !important;
+}
+
+.paymentEmptyText {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #4b5563 !important;
+  margin-bottom: 8px !important;
+}
+
+.paymentEmptySubtext {
+  font-size: 14px !important;
+  color: #9ca3af !important;
+}
+
+.paymentRecordsTable {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+.paymentRecordsTableHeader {
+  display: grid !important;
+  grid-template-columns: 160px 120px 180px 180px 1fr 50px !important;
+  gap: 12px !important;
+  padding: 14px 20px !important;
+  background: #f9fafb !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #e5e7eb !important;
+
+  .required-asterisk {
+    color: #ef4444 !important;
+    font-weight: 600 !important;
+  }
+}
+
+.paymentRecordRow {
+  display: grid !important;
+  grid-template-columns: 160px 120px 180px 180px 1fr 50px !important;
+  gap: 12px !important;
+  padding: 12px 20px !important;
+  align-items: start !important;
+  border-bottom: 1px solid #e5e7eb !important;
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  &:hover {
+    background: #f9fafb !important;
+  }
+
+  input.erpInput,
+  select.erpSelect {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 36px !important;
+    padding: 0 10px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    background: #ffffff !important;
+    outline: none !important;
+    transition: all 0.2s !important;
+
+    &:focus {
+      border-color: #2563eb !important;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+    }
+
+    &.error {
+      border-color: #dc2626 !important;
+      
+      &:focus {
+        border-color: #dc2626 !important;
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+      }
+    }
+  }
+}
+
+.paymentFieldWrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+
+  .errorHelperText {
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    margin-top: 2px !important;
+  }
+}
+
+.deletePaymentBtn {
+  color: #ef4444 !important;
+  padding: 6px !important;
+  border-radius: 50% !important;
+  align-self: center !important;
+
+  &:hover {
+    background-color: #fee2e2 !important;
+  }
+
+  svg {
+    font-size: 20px !important;
+    color: #ef4444 !important;
+  }
+
+  .MuiSvgIcon-root {
+    color: #ef4444 !important;
+  }
+}
+
+/* ---------- ACTIONS BAR ---------- */
+.erpActionsBar {
+  margin-top: 20px !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  border: 1px solid #e5e7eb !important;
+  padding: 16px 24px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.erpActionsBar-left,
+.erpActionsBar-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Cancel Button */
+.erpCancelBtn {
+  background: #ffffff !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  &:hover {
+    background: #f9fafb !important;
+    border-color: #9ca3af !important;
+  }
+
+  &:active {
+    transform: scale(0.98) !important;
+  }
+}
+
+/* Save as Draft Button */
+.erpDraftBtn {
+  background: #ffffff !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-width: 160px !important;
+  height: 40px !important;
+
+  &:hover {
+    background: #f9fafb !important;
+    border-color: #9ca3af !important;
+  }
+
+  &:active {
+    transform: scale(0.98) !important;
+  }
+
+  &:disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+  }
+}
+
+/* Create Purchase Invoice Button */
+.erpCreateBtn {
+  background: #d1d5db !important;
+  color: #9ca3af !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: inherit !important;
+  cursor: not-allowed !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-width: 200px !important;
+  height: 40px !important;
+
+  &:not(.disabled) {
+    background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    cursor: pointer !important;
+
+    &:hover {
+      background: linear-gradient(180deg, #1d4ed8 0%, #1e40af 100%) !important;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+    }
+
+    &:active {
+      transform: scale(0.98) !important;
+    }
+  }
+
+  &.disabled {
+    opacity: 1 !important;
+  }
+}
+
+/* Mark as Revised Button (Green) */
+.erpMarkRevisedBtn {
+  min-width: 180px !important;
+  height: 40px !important;
+  justify-content: center !important;
+  
+  &:not(.disabled) {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+
+    &:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+    }
+
+    &:active {
+      transform: scale(0.98) !important;
+    }
+  }
+}
+
+/* ---------- GRN DIALOG ---------- */
+.grnDialog {
+  .MuiDialog-paper {
+    border-radius: 16px !important;
+    max-width: 900px !important;
+  }
+}
+
+.grnDialogTitle {
+  padding: 24px 24px 16px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.grnDialogHeader {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+}
+
+.grnDialogHeaderLeft {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+}
+
+.grnDialogIcon {
+  font-size: 32px !important;
+  color: #2563eb !important;
+  background: #eff6ff !important;
+  padding: 12px !important;
+  border-radius: 12px !important;
+}
+
+.grnDialogMainTitle {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+.grnDialogSubtitle {
+  font-size: 14px !important;
+  color: #64748b !important;
+  margin-top: 2px !important;
+}
+
+.grnDialogClose {
+  color: #64748b !important;
+  
+  &:hover {
+    background-color: #f3f4f6 !important;
+  }
+}
+
+.grnDialogContent {
+  padding: 24px !important;
+}
+
+.grnDialogSectionTitle {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  margin-bottom: 16px !important;
+}
+
+.grnDialogInfoGrid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+  margin-bottom: 24px !important;
+}
+
+.grnDialogInfoItem {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.grnDialogInfoIcon {
+  font-size: 18px !important;
+  color: #64748b !important;
+  margin-top: 2px !important;
+}
+
+.grnDialogInfoLabel {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #2563eb !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 4px !important;
+}
+
+.grnDialogInfoValue {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+.grnDialogStatusBadge {
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  
+  &.variance {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+  }
+  
+  &.complete {
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
+  }
+}
+
+.grnDialogTable {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.grnDialogTableHeader {
+  display: grid !important;
+  grid-template-columns: 100px 1fr 80px 120px 100px 80px 100px !important;
+  background: #f9fafb !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 12px 16px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+}
+
+.grnDialogTableRow {
+  display: grid !important;
+  grid-template-columns: 100px 1fr 80px 120px 100px 80px 100px !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  font-size: 14px !important;
+  color: #1e293b !important;
+  
+  &:last-child {
+    border-bottom: none !important;
+  }
+}
+
+.grnDialogTableFooter {
+  display: grid !important;
+  grid-template-columns: 100px 1fr 80px 120px 100px 80px 100px !important;
+  padding: 12px 16px !important;
+  background: #f9fafb !important;
+  border-top: 2px solid #e5e7eb !important;
+  font-weight: 600 !important;
+}
+
+.grnDialogTableCell {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.partialBadge {
+  display: inline-block !important;
+  margin-left: 6px !important;
+  padding: 2px 8px !important;
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+.totalLabel {
+  justify-content: flex-end !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+.totalValue {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+}
+
+.grnDialogActions {
+  padding: 16px 24px !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+
+.grnDialogCloseBtn {
+  background: #374151 !important;
+  color: #ffffff !important;
+  padding: 8px 24px !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  
+  &:hover {
+    background: #1f2937 !important;
+  }
+}
+
+/* ---------- REVISION CONFIRMATION DIALOG ---------- */
+.revisionConfirmDialog {
+  .MuiDialog-paper {
+    border-radius: 12px !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  }
+}
+
+/* ---------- PAYMENT TERMS TOOLTIP ---------- */
+/* Label row with info icon */
+.paymentTermsLabelRow {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-bottom: 8px !important;
+  
+  .erpLabel {
+    margin-bottom: 0 !important; /* Remove default margin when inside label row */
+  }
+}
+
+/* Info icon wrapper */
+.paymentTermsInfoIconWrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+}
+
+/* Payment Terms Info Icon */
+.paymentTermsInfoIcon {
+  color: #9ca3af !important; /* Gray when not hovered */
+  font-size: 16px !important;
+  transition: all 0.2s ease !important;
+  display: block !important;
+  
+  .paymentTermsInfoIconWrapper:hover & {
+    color: #3b82f6 !important; /* Blue when hovered */
+  }
+}
+
